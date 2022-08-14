@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "light-blue": "#46D0D9",
+              blue: "#192BC2",
+              "dark-blue-1": "#150578",
+              "dark-blue-2": "#0E0E52",
+              "white-blue": "#F1FBFF",
+              "light-white": "#F8FAFE",
+              "light-gray": "#D3DBE2",
+            },
+            fontFamily: {
+              rubik: "'Rubik', sans-serif",
+            },
+            boxShadow: {
+              input: "0px 0px 20px 0px rgba(29, 40, 142, 0.07)",
+              box: "0px 4px 4px 0px rgba(14, 14, 82, 0.07)",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Rubik Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/d19de467c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style/style.css" />
+    <title>Formulaire</title>
+  </head>
+  <body class="font-rubik bg-white-blue px-20">
+    <!-- Header -->
+    <header
+      class="max-w-[1200px] flex flex-row justify-between items-center bg-dark-blue-2 rounded-bl-xl rounded-br-xl px-8 py-4 mx-auto"
+    >
+      <p class="text-white text-4xl font-bold">LOGO</p>
+    </header>
+
+    <main>
+      <section class="max-w-[1000px] mx-auto mt-20">
+        <ul class="flex flex-row justify-between items-start">
+          <li
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+          >
+            <img src="src/icons/user.svg" alt="icon user" />
+          </li>
+          <li
+            class="bg-light-blue flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+          >
+            <img src="src/icons/immeuble.svg" alt="icon immeuble" />
+            <p class="text-white font-bold mt-5">Immeuble</p>
+          </li>
+          <li
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+          >
+            <img src="src/icons/key.svg" alt="icon clé" />
+          </li>
+          <li
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+          >
+            <img src="src/icons/signature.svg" alt="icon signature" />
+          </li>
+          <li
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+          >
+            <img src="src/icons/epingle.svg" alt="icon épingle" />
+          </li>
+          <li
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+          >
+            <img src="src/icons/lettre.svg" alt="icon lettre" />
+          </li>
+        </ul>
+
+        <form
+          class="max-w-[1000px] mt-20 bg-white mx-auto rounded-tl-3xl rounded-tr-3xl"
+        >
+          <div class="p-5 border-b-2">
+            <h3 class="text-dark-blue-1 text-xl font-bold">Mon immeuble</h3>
+          </div>
+          <div class="py-12 px-20 border-b-2 bg-light-white">
+            <p>Renseignements relatifs à l'immeuble</p>
+            <p class="text-dark-blue-1">
+              Nous allons compléter la partie relative à l'immeuble.
+            </p>
+          </div>
+          <div class="py-8 px-20 bg-light-white border-b-2">
+            <div class="flex flex-row items-center gap-x-3 mb-7">
+              <img src="src/icons/localisation.svg" alt="icon localisation" />
+              <h3 class="text-dark-blue-1 text-2xl font-bold">Localisation</p>
+            </div>
+
+            <div class="max-w-[450px] flex flex-col gap-y-3 ml-20">
+              <div class="flex flex-row items-center gap-x-8">
+                <div class="flex flex-col">
+                  <label for="numero" class="text-dark-blue-2 mb-1"
+                    >Numéro</label
+                  >
+                  <input
+                    type="number"
+                    id="numero"
+                    class="w-[45px] text-dark-blue-2 font-light outline-none bg-[#F0FAFF] rounded-lg shadow-input p-2"
+                  />
+                </div>
+                <div class="flex flex-col flex-1">
+                  <label for="voie" class="text-dark-blue-2 mb-1">Voie</label>
+                  <div
+                    class="flex flex-row justify-between items-center bg-[#F0FAFF] rounded-lg shadow-input p-2"
+                  >
+                    <input
+                      type="text"
+                      id="voie"
+                      class="flex-1 text-dark-blue-2 font-light outline-none bg-transparent"
+                    />
+                    <img
+                      src="src/icons/valid-input.svg"
+                      alt="icon input valide"
+                      class="w-[15px]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col flex-1">
+                <label for="lieu-dit" class="text-dark-blue-2 mb-1"
+                  >Lieu-dit</label
+                >
+                <div
+                  class="flex flex-row justify-between items-center bg-[#F0FAFF] rounded-lg shadow-input p-2"
+                >
+                  <input
+                    type="text"
+                    id="lieu-dit"
+                    class="flex-1 text-dark-blue-2 font-light outline-none bg-transparent"
+                  />
+                  <img
+                    src="src/icons/valid-input.svg"
+                    alt="icon input valide"
+                    class="w-[15px]"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-row items-center gap-x-8">
+                <div class="flex flex-col">
+                  <label for="postal" class="text-dark-blue-2 mb-1"
+                    >Code postal</label
+                  >
+                  <input
+                    type="number"
+                    id="postal"
+                    class="w-[90px] text-dark-blue-2 font-light outline-none bg-[#F0FAFF] rounded-lg shadow-input p-2"
+                  />
+                </div>
+                <div class="flex flex-col flex-1">
+                  <label for="localité" class="text-dark-blue-2 mb-1"
+                    >Localité</label
+                  >
+                  <div
+                    class="flex flex-row justify-between items-center bg-[#F0FAFF] rounded-lg shadow-input p-2"
+                  >
+                    <input
+                      type="text"
+                      id="localité"
+                      class="flex-1 text-dark-blue-2 font-light outline-none bg-transparent"
+                    />
+                    <img
+                      src="src/icons/valid-input.svg"
+                      alt="icon input valide"
+                      class="w-[15px]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-row items-center gap-x-8">
+                <div class="flex flex-col">
+                  <label for="bp" class="text-dark-blue-2 mb-1">BP</label>
+                  <input
+                    type="number"
+                    id="bp"
+                    class="w-[90px] text-dark-blue-2 font-light outline-none bg-[#F0FAFF] rounded-lg shadow-input p-2"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <label for="cedex" class="text-dark-blue-2 mb-1">Cedex</label>
+                  <input
+                    type="number"
+                    id="cedex"
+                    class="w-[90px] text-dark-blue-2 font-light outline-none bg-[#F0FAFF] rounded-lg shadow-input p-2"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="py-8 px-20 bg-light-white border-b-2">
+            <div class="flex flex-row items-center gap-x-3 mb-8">
+              <img
+                src="src/icons/renseignement-immeuble.svg"
+                alt="icon localisation"
+              />
+              <h3 class="text-dark-blue-1 text-2xl font-bold">
+                Renseignements relatifs à l'immeuble
+              </p>
+            </div>
+
+            <div class="ml-20">
+              <div
+                class="flex flex-row items-center bg-white rounded-lg w-fit mb-8"
+              >
+                <!-- Les inputs select et options sont difficilement modifiables en raison du style imposé par les différents navigateurs -->
+                <select
+                  class="w-[170px] appearance-none flex flex-row justify-center items-center text-dark-blue-1 outline-none border-r-2 rounded-tl-xl rounded-bl-xl shadow-input p-2"
+                >
+                  <option disabled selected class="text-dark-blue-1">
+                    Type d'habitat
+                  </option>
+                  <option value="maison-individuelle" class="text-dark-blue-1">
+                    Maison individuelle
+                  </option>
+                  <option value="immeuble-collectif" class="text-dark-blue-1">
+                    Immeuble collectif
+                  </option>
+                </select>
+                <img
+                  src="src/icons/arrow-down.svg"
+                  alt="icon flèche vers le bas"
+                  class="px-3"
+                />
+              </div>
+
+              <div class="flex flex-row items-center bg-white rounded-xl w-fit mb-10">
+                <select
+                  class="w-[170px] appearance-none flex flex-row justify-center items-center text-dark-blue-1 outline-none border-r-2 rounded-tl-xl rounded-bl-xl shadow-input p-2"
+                >
+                  <option disabled selected class="text-dark-blue-1">
+                    Régime juridique
+                  </option>
+                  <option value="mono-propriété" class="text-dark-blue-1">
+                    Mono propriété
+                  </option>
+                  <option value="copropriété" class="text-dark-blue-1">
+                    Copropriété
+                  </option>
+                </select>
+                <img
+                  src="src/icons/arrow-down.svg"
+                  alt="icon flèche vers le bas"
+                  class="px-3"
+                />
+              </div>
+
+              <h4 class="text-dark-blue-1 text-xl font-medium mb-8">Période de construction</h4>
+
+              <div class="w-[600px] h-10 flex flex-row justify-between items-center">
+                <!-- flèche bleu -->
+                <img src="src/icons/fleche.svg" alt="icon flèche" class="absolute">
+                <input type="radio" id="49" name="date" value="Avant 1949" class="hidden z-10">
+                <label for="49" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                        <img src="src/icons/checked.svg" alt="icon check">
+                    </div>
+                </label>
+
+                <input type="radio" id="49-74" name="date" value="De 1949 à 1974" class="hidden z-10">
+                <label for="49-74" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                        <img src="src/icons/checked.svg" alt="icon check">
+                    </div>
+                </label>
+
+                <input type="radio" id="75-89" name="date" value="De 1975 à 1989" class="hidden z-10">
+                <label for="75-89" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                        <img src="src/icons/checked.svg" alt="icon check">
+                    </div>
+                </label>
+
+                <input type="radio" id="89-05" name="date" value="De 1989 à 2005" class="hidden z-10">
+                <label for="89-05" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                        <img src="src/icons/checked.svg" alt="icon check">
+                    </div>
+                </label>
+
+                <input type="radio" id="05" name="date" value="Depuis 2005" class="hidden">
+                <label for="05" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                        <img src="src/icons/checked.svg" alt="icon check">
+                    </div>
+                </label>
+                
+              </div>
+            </div>
+
+            <!-- a enlever -->
+            <div class="mb-[100px]"></div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "light-blue": "#46D0D9",
+              blue: "#192BC2",
+              "dark-blue-1": "#150578",
+              "dark-blue-2": "#0E0E52",
+              "white-blue": "#F1FBFF",
+              "light-white": "#F8FAFE",
+            },
+            fontFamily: {
+              rubik: "'Rubik', sans-serif",
+            },
+            boxShadow: {
+              input: "0px 0px 20px 0px rgba(29, 40, 142, 0.07)",
+              box: "0px 4px 4px 0px rgba(14, 14, 82, 0.07)",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Rubik Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/d19de467c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Accueil</title>
+  </head>
+  <body class="font-rubik bg-white-blue px-20">
+    <!-- Header -->
+    <header
+      class="max-w-[1200px] flex flex-row justify-between items-center bg-dark-blue-2 rounded-bl-xl rounded-br-xl px-8 py-4 mx-auto"
+    >
+      <p class="text-white text-4xl font-bold">LOGO</p>
+      <nav>
+        <ul class="flex flex-row items-center gap-x-10">
+          <li>
+            <a
+              href="#"
+              class="relative text-white text-lg font-light after:content-[''] after:absolute after:left-0 after:top-7 after:w-0 after:h-[2px] after:bg-white hover:duration-400 hover:after:transition-all hover:after:w-full"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="relative text-white text-lg font-light after:content-[''] after:absolute after:left-0 after:top-7 after:w-0 after:h-[2px] after:bg-white hover:duration-400 hover:after:transition-all hover:after:w-full"
+              >Espace commune</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="max-w-[1200px] mx-auto">
+      <!-- Section Accueil -->
+      <section>
+        <div class="grid grid-cols-2 mt-24">
+          <!-- Ici, je peux modifier et mettre items-center pour que ce soit centrer, au lieu que ce soit coller à gauche. A voir avec toi -->
+          <div class="flex flex-col justify-center items-start">
+            <h1 class="uppercase text-4xl text-dark-blue-2 font-medium mb-10">
+              Lepermisdelouer.fr
+            </h1>
+            <p class="text-dark-blue-2 max-w-[280px] mb-10">
+              Vérifiez si votre commune a mit en place le permis de louer.
+              Faites votre démarche en toute simplicité le cas échéant.
+            </p>
+            <a href="#">
+              <div
+                class="w-fit flex flex-row items-center bg-white rounded-lg gap-x-3 px-3 group transition duration-300 hover:bg-blue"
+              >
+                <p
+                  class="text-dark-blue-2 font-[40px] border-r-2 pr-5 py-2 transition duration-300 group-hover:text-white"
+                >
+                  Passer directement au dossier
+                </p>
+                <i
+                  class="fas fa-chevron-right text-dark-blue-2 text-xs transition duration-300 group-hover:text-white"
+                ></i>
+              </div>
+            </a>
+          </div>
+          <div>
+            <form
+              action="#"
+              class="relative flex flex-col items-center bg-light-white border rounded-xl shadow-box p-20"
+            >
+              <div class="grid grid-cols-2 gap-x-8">
+                <div class="mb-5">
+                  <label for="nom" class="text-dark-blue-1">Nom</label>
+                  <input
+                    type="text"
+                    id="nom"
+                    class="w-full text-dark-blue-2 font-light rounded-lg outline-none shadow-input py-2 px-5 mt-2"
+                  />
+                </div>
+                <div>
+                  <label for="prenom" class="text-dark-blue-1">Prénom</label>
+                  <input
+                    type="text"
+                    id="prenom"
+                    class="w-full text-dark-blue-2 font-light rounded-lg outline-none shadow-input py-2 px-5 mt-2"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex flex-col mb-5">
+                <label for="ville" class="text-dark-blue-1">Ville</label>
+                <input
+                  type="text"
+                  id="ville"
+                  class="text-dark-blue-2 font-light rounded-lg outline-none shadow-input py-2 px-5 mt-2"
+                />
+              </div>
+              <div class="w-full flex flex-col mb-12">
+                <label for="ville" class="text-dark-blue-1">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="text-dark-blue-2 font-light rounded-lg outline-none shadow-input py-2 px-5 mt-2"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full text-white text-xl uppercase font-bold bg-blue rounded-lg py-4 transition duration-300 hover:bg-dark-blue-1"
+              >
+                Ma ville est concernée ?
+              </button>
+              <a
+                href="#"
+                class="absolute bottom-4 right-4 text-xs text-dark-blue-2 underline"
+              >
+                Je suis une agence
+              </a>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="w-full flex flex-row items-center justify-between bg-white rounded-xl shadow-box px-10 py-12 mt-24 mb-24"
+        >
+          <div class="flex flex-row items-center gap-x-2">
+            <p class="text-dark-blue-2">Ils nous font confiance</p>
+            <i class="fas fa-heart text-red-500"></i>
+          </div>
+          <img
+            src="./src/img/mureaux.png"
+            alt="image mureaux"
+            class="w-[150px] h-[42px] object-cover"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

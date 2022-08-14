@@ -1,0 +1,13 @@
+@layer utilities {
+  /* cache les flèches au niveau des inputs */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+/* modification au clique d'un radio button au niveau de la période de construction */
+input[type="radio"]:checked + .inputChecked {
+  background-color: #46D0D9;
+}
