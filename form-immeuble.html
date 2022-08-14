@@ -223,9 +223,10 @@
               </p>
             </div>
 
-            <div class="ml-20">
+            <!-- ici ajouter ml-20 si fonctionne pas -->
+            <div class="ml">
               <div
-                class="flex flex-row items-center bg-white rounded-lg w-fit mb-8"
+                class="flex flex-row items-center bg-white rounded-lg w-fit mb-8 ml-20"
               >
                 <!-- Les inputs select et options sont difficilement modifiables en raison du style imposé par les différents navigateurs -->
                 <select
@@ -248,7 +249,7 @@
                 />
               </div>
 
-              <div class="flex flex-row items-center bg-white rounded-xl w-fit mb-10">
+              <div class="flex flex-row items-center bg-white rounded-xl w-fit mb-10 ml-20">
                 <select
                   class="w-[170px] appearance-none flex flex-row justify-center items-center text-dark-blue-1 outline-none border-r-2 rounded-tl-xl rounded-bl-xl shadow-input p-2"
                 >
@@ -269,47 +270,72 @@
                 />
               </div>
 
-              <h4 class="text-dark-blue-1 text-xl font-medium mb-8">Période de construction</h4>
+              <h4 class="text-dark-blue-1 text-xl font-medium mb-8 ml-20">Période de construction</h4>
 
-              <div class="w-[600px] h-10 flex flex-row justify-between items-center">
-                <!-- flèche bleu -->
-                <img src="src/icons/fleche.svg" alt="icon flèche" class="absolute">
-                <input type="radio" id="49" name="date" value="Avant 1949" class="hidden z-10">
-                <label for="49" class="bg-white z-10 rounded cursor-pointer inputChecked">
-                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                        <img src="src/icons/checked.svg" alt="icon check">
-                    </div>
-                </label>
+             
+                <div class="max-w-[740px] flex flex-row items-center gap-x-10 mb-5 mx-auto">
+                    <p class="text-dark-blue-1">Avant 1949</p>
+                    <p class="text-dark-blue-1">De 1949 à 1974</p>
+                    <p class="text-dark-blue-1">De 1975 à 1989</p>
+                    <p class="text-dark-blue-1">De 1989 à 2005</p>
+                    <p class="text-dark-blue-1">Depuis 2005</p>
+                </div>
+                  <div class="w-[600px] h-10 flex flex-row justify-between items-center mb-10 ml-20">
+                    <!-- flèche bleu -->
+                    <img src="src/icons/fleche.svg" alt="icon flèche" class="absolute">
+    
+                    <input type="radio" id="49" name="date" value="Avant 1949" class="hidden z-10">
+                    <label for="49" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                        <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                            <img src="src/icons/checked.svg" alt="icon check">
+                        </div>
+                    </label>
+    
+                    <input type="radio" id="49-74" name="date" value="De 1949 à 1974" class="hidden z-10">
+                    <label for="49-74" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                        <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                            <img src="src/icons/checked.svg" alt="icon check">
+                        </div>
+                    </label>
+    
+                    <input type="radio" id="75-89" name="date" value="De 1975 à 1989" class="hidden z-10">
+                    <label for="75-89" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                        <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                            <img src="src/icons/checked.svg" alt="icon check">
+                        </div>
+                    </label>
+    
+                    <input type="radio" id="89-05" name="date" value="De 1989 à 2005" class="hidden z-10">
+                    <label for="89-05" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                        <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                            <img src="src/icons/checked.svg" alt="icon check">
+                        </div>
+                    </label>
+    
+                    <input type="radio" id="05" name="date" value="Depuis 2005" class="hidden">
+                    <label for="05" class="bg-white z-10 rounded cursor-pointer inputChecked">
+                        <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
+                            <img src="src/icons/checked.svg" alt="icon check">
+                        </div>
+                    </label>
+                    
+                  </div>
 
-                <input type="radio" id="49-74" name="date" value="De 1949 à 1974" class="hidden z-10">
-                <label for="49-74" class="bg-white z-10 rounded cursor-pointer inputChecked">
-                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                        <img src="src/icons/checked.svg" alt="icon check">
+                  <div class="flex flex-row items-center gap-x-12 ml-20">
+                    <div class="flex flex-col items-center gap-y-3 cursor-pointer">
+                        <div class="w-[120px] h-[120px] flex flex-row justify-center items-center bg-light-blue rounded-lg shadow-box">
+                            <img src="src/icons/poubelle-blanche.svg" alt="icon poubelle">
+                        </div>
+                        <p class="text-dark-blue-1">Local poubelle</p>
                     </div>
-                </label>
+                    <div class="flex flex-col items-center gap-y-3 cursor-pointer">
+                        <div class="w-[120px] h-[120px] flex flex-row justify-center items-center bg-white rounded-lg shadow-box">
+                            <img src="src/icons/extincteur-bleu.svg" alt="icon extincteur">
+                        </div>
+                        <p class="text-dark-blue-1">Extincteurs</p>
+                    </div>
+                  </div>
 
-                <input type="radio" id="75-89" name="date" value="De 1975 à 1989" class="hidden z-10">
-                <label for="75-89" class="bg-white z-10 rounded cursor-pointer inputChecked">
-                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                        <img src="src/icons/checked.svg" alt="icon check">
-                    </div>
-                </label>
-
-                <input type="radio" id="89-05" name="date" value="De 1989 à 2005" class="hidden z-10">
-                <label for="89-05" class="bg-white z-10 rounded cursor-pointer inputChecked">
-                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                        <img src="src/icons/checked.svg" alt="icon check">
-                    </div>
-                </label>
-
-                <input type="radio" id="05" name="date" value="Depuis 2005" class="hidden">
-                <label for="05" class="bg-white z-10 rounded cursor-pointer inputChecked">
-                    <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                        <img src="src/icons/checked.svg" alt="icon check">
-                    </div>
-                </label>
-                
-              </div>
             </div>
 
             <!-- a enlever -->
