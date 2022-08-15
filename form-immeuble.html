@@ -18,6 +18,7 @@
               "dark-blue-2": "#0E0E52",
               "white-blue": "#F1FBFF",
               "light-white": "#F8FAFE",
+              "gray": "#8A9BAB",
               "light-gray": "#D3DBE2",
             },
             fontFamily: {
@@ -58,51 +59,51 @@
       <section class="max-w-[1000px] mx-auto mt-20">
         <ul class="flex flex-row justify-between items-start">
           <li
-            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[125px] h-[125px] shadow-box py-8"
           >
             <img src="src/icons/user.svg" alt="icon user" />
           </li>
           <li
-            class="bg-light-blue flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+            class="bg-light-blue flex flex-col justify-center items-center rounded-md w-[125px] h-[175px] shadow-box py-8"
           >
             <img src="src/icons/immeuble.svg" alt="icon immeuble" />
             <p class="text-white font-bold mt-5">Immeuble</p>
           </li>
           <li
-            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[125px] h-[125px] shadow-box py-8"
           >
             <img src="src/icons/key.svg" alt="icon clé" />
           </li>
           <li
-            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[125px] h-[125px] shadow-box py-8"
           >
             <img src="src/icons/signature.svg" alt="icon signature" />
           </li>
           <li
-            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[125px] h-[125px] shadow-box py-8"
           >
             <img src="src/icons/epingle.svg" alt="icon épingle" />
           </li>
           <li
-            class="bg-white flex flex-col justify-center items-center rounded-md w-[120px] py-8"
+            class="bg-white flex flex-col justify-center items-center rounded-md w-[125px] h-[125px] shadow-box py-8"
           >
             <img src="src/icons/lettre.svg" alt="icon lettre" />
           </li>
         </ul>
 
         <form
-          class="max-w-[1000px] mt-20 bg-white mx-auto rounded-tl-3xl rounded-tr-3xl"
+          class="max-w-[1000px] bg-light-white border-2 border-light-gray rounded-3xl mx-auto shadow-box mt-20"
         >
-          <div class="p-5 border-b-2">
-            <h3 class="text-dark-blue-1 text-xl font-bold">Mon immeuble</h3>
+          <div class="bg-white border-b-2 border-light-gray rounded-tl-3xl rounded-tr-3xl py-5 px-8">
+            <h3 class="text-dark-blue-1 text-xl font-medium">Mon immeuble</h3>
           </div>
-          <div class="py-12 px-20 border-b-2 bg-light-white">
-            <p>Renseignements relatifs à l'immeuble</p>
+          <div class="bg-light-white border-b-2 border-light-gray py-12 px-20">
+            <p class="text-gray">Renseignements relatifs à l'immeuble</p>
             <p class="text-dark-blue-1">
               Nous allons compléter la partie relative à l'immeuble.
             </p>
           </div>
-          <div class="py-8 px-20 bg-light-white border-b-2">
+          <div class="bg-light-white border-b-2 border-light-gray py-8 px-20">
             <div class="flex flex-row items-center gap-x-3 mb-7">
               <img src="src/icons/localisation.svg" alt="icon localisation" />
               <h3 class="text-dark-blue-1 text-2xl font-bold">Localisation</p>
@@ -212,7 +213,7 @@
             </div>
           </div>
 
-          <div class="py-8 px-20 bg-light-white border-b-2">
+          <div class="py-8 px-20 bg-light-white">
             <div class="flex flex-row items-center gap-x-3 mb-8">
               <img
                 src="src/icons/renseignement-immeuble.svg"
@@ -230,7 +231,7 @@
               >
                 <!-- Les inputs select et options sont difficilement modifiables en raison du style imposé par les différents navigateurs -->
                 <select
-                  class="w-[170px] appearance-none flex flex-row justify-center items-center text-dark-blue-1 outline-none border-r-2 rounded-tl-xl rounded-bl-xl shadow-input p-2"
+                  class="w-[170px] appearance-none flex flex-row justify-center items-center text-dark-blue-1 outline-none border-r-2 rounded-tl-xl rounded-bl-xl cursor-pointer shadow-input p-2"
                 >
                   <option disabled selected class="text-dark-blue-1">
                     Type d'habitat
@@ -251,7 +252,7 @@
 
               <div class="flex flex-row items-center bg-white rounded-xl w-fit mb-10 ml-20">
                 <select
-                  class="w-[170px] appearance-none flex flex-row justify-center items-center text-dark-blue-1 outline-none border-r-2 rounded-tl-xl rounded-bl-xl shadow-input p-2"
+                  class="w-[170px] appearance-none flex flex-row justify-center items-center text-dark-blue-1 outline-none border-r-2 rounded-tl-xl rounded-bl-xl cursor-pointer shadow-input p-2"
                 >
                   <option disabled selected class="text-dark-blue-1">
                     Régime juridique
@@ -287,62 +288,110 @@
                     <input type="radio" id="49" name="date" value="Avant 1949" class="hidden z-10">
                     <label for="49" class="bg-white z-10 rounded cursor-pointer inputChecked">
                         <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                            <img src="src/icons/checked.svg" alt="icon check">
+                            <img src="src/icons/checked-white.svg" alt="icon check blanche">
                         </div>
                     </label>
     
                     <input type="radio" id="49-74" name="date" value="De 1949 à 1974" class="hidden z-10">
                     <label for="49-74" class="bg-white z-10 rounded cursor-pointer inputChecked">
                         <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                            <img src="src/icons/checked.svg" alt="icon check">
+                            <img src="src/icons/checked-white.svg" alt="icon check blanche">
                         </div>
                     </label>
     
                     <input type="radio" id="75-89" name="date" value="De 1975 à 1989" class="hidden z-10">
                     <label for="75-89" class="bg-white z-10 rounded cursor-pointer inputChecked">
                         <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                            <img src="src/icons/checked.svg" alt="icon check">
+                            <img src="src/icons/checked-white.svg" alt="icon check blanche">
                         </div>
                     </label>
     
                     <input type="radio" id="89-05" name="date" value="De 1989 à 2005" class="hidden z-10">
                     <label for="89-05" class="bg-white z-10 rounded cursor-pointer inputChecked">
                         <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                            <img src="src/icons/checked.svg" alt="icon check">
+                            <img src="src/icons/checked-white.svg" alt="icon check blanche">
                         </div>
                     </label>
     
                     <input type="radio" id="05" name="date" value="Depuis 2005" class="hidden">
                     <label for="05" class="bg-white z-10 rounded cursor-pointer inputChecked">
                         <div class="w-[25px] h-[25px] flex flex-row justify-center items-center">
-                            <img src="src/icons/checked.svg" alt="icon check">
+                            <img src="src/icons/checked-white.svg" alt="icon check blanche">
                         </div>
                     </label>
                     
                   </div>
 
                   <div class="flex flex-row items-center gap-x-12 ml-20">
-                    <div class="flex flex-col items-center gap-y-3 cursor-pointer">
-                        <div class="w-[120px] h-[120px] flex flex-row justify-center items-center bg-light-blue rounded-lg shadow-box">
-                            <img src="src/icons/poubelle-blanche.svg" alt="icon poubelle">
+                    <input type="checkbox" name="local-poubelle" id="local-poubelle" class="hidden">
+                    <label for="local-poubelle" class="flex flex-col items-center gap-y-3 cursor-pointer">
+                        <div class="w-[120px] h-[120px] flex flex-row justify-center items-center bg-white rounded-lg shadow-box inputChecked">
+                            <img src="src/icons/poubelle-bleu.svg" alt="icon poubelle bleu" class="trashBlue">
+                            <img src="src/icons/poubelle-blanche.svg" alt="icon poubelle blanche" class="hidden trashWhite">
                         </div>
-                        <p class="text-dark-blue-1">Local poubelle</p>
-                    </div>
-                    <div class="flex flex-col items-center gap-y-3 cursor-pointer">
-                        <div class="w-[120px] h-[120px] flex flex-row justify-center items-center bg-white rounded-lg shadow-box">
-                            <img src="src/icons/extincteur-bleu.svg" alt="icon extincteur">
+                        <div class="flex flex-row items-center gap-x-2">
+                            <p class="text-dark-blue-1">Local poubelle</p>
+                            <img src="src/icons/checked-blue.svg" alt="icon check bleu" class="invisible trashCheck">
                         </div>
-                        <p class="text-dark-blue-1">Extincteurs</p>
+                    </label>
+                    <div class="flex flex-col items-center gap-y-3 cursor-pointer">
+                        <input type="checkbox" name="extincteur" id="extincteur" class="hidden">
+                    <label for="extincteur" class="flex flex-col items-center gap-y-3 cursor-pointer">
+                        <div class="w-[120px] h-[120px] flex flex-row justify-center items-center bg-white rounded-lg shadow-box inputChecked">
+                            <img src="src/icons/extincteur-bleu.svg" alt="icon extincteur bleu" class="extinguisherBlue">
+                            <img src="src/icons/extincteur-blanc.svg" alt="icon extincteur blanc" class="hidden extinguisherWhite">
+                        </div>
+                        <div class="flex flex-row items-center gap-x-2">
+                            <p class="text-dark-blue-1">Extincteurs</p>
+                            <img src="src/icons/checked-blue.svg" alt="icon check bleu" class="invisible extinguisherCheck">
+                        </div>
                     </div>
                   </div>
-
             </div>
+          </div>
+          <div class="flex flex-row justify-between items-center bg-white rounded-3xl py-8 px-12">
+            <div class="relative w-[80px] h-[80px] rounded-full border-[10px] border-light-gray"></div>
+            <div class="absolute w-[80px] h-[80px] rounded-full flex flex-row justify-center items-center">
 
-            <!-- a enlever -->
-            <div class="mb-[100px]"></div>
+                <div class="w-[60px] h-[60px] rounded-full flex flex-col justify-center items-center">
+                    <p class="text-dark-blue-2 font-bold h-5">6</p>
+                    <p class="text-dark-blue-2 text-xs font-light">Etapes</p>
+                </div>
+
+                <!-- cercle représentant le chargement -->
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="80px" height="80px" class="absolute top-0 left-0 rotate-[-85deg]">
+                    <circle cx="40" cy="40" r="35" stroke-linecap="round" />
+                </svg>
+                
+            </div>
+            <button
+                type="submit"
+                class="w-[200px] text-white text-xl uppercase font-bold bg-blue rounded-lg py-4 transition duration-300 hover:bg-dark-blue-1"
+              >
+                Suivant
+              </button>
           </div>
         </form>
+    
       </section>
     </main>
+
+    <footer class="max-w-[1200px] bg-white rounded-2xl mt-20 mx-auto p-12">
+        <div class="w-full h-[1px] bg-blue mb-10"></div>
+        <div class="flex flex-row justify-between items-center mb-32">
+            <p class="uppercase text-dark-blue-2 text-xl font-bold">Logo</p>
+            <nav>
+                <ul class="flex flex-row items-center gap-x-6">
+                    <li class="text-dark-blue-2 font-medium"><a href="#">Accueil</a></li>
+                    <li class="text-dark-blue-2 font-medium"><a href="#">Qui sommes-nous ?</a></li>
+                    <li class="text-dark-blue-2 font-medium"><a href="#">Comment ça marche ?</a></li>
+                    <li class="text-dark-blue-2 font-medium"><a href="#">Contact</a></li>
+                    <li class="text-dark-blue-2 font-medium"><a href="#">Mentions légales</a></li>
+                    <li class="text-dark-blue-2 font-medium"><a href="#">Confidentialité</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="text-dark-blue-1 text-center">&copy; 2022 InfoSCI. Tous droits réservés.</p>
+    </footer>
   </body>
 </html>

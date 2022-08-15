@@ -7,7 +7,41 @@
   }
 }
 
-/* modification au clique d'un radio button au niveau de la période de construction */
-input[type="radio"]:checked + .inputChecked {
-  background-color: #46D0D9;
+/* modification au clique des checkboxes */
+input[type="radio"]:checked + .inputChecked,
+input[type="checkbox"]:checked + label > .inputChecked {
+  background-color: #46d0d9;
+}
+
+/* cache l'icon bleu */
+input[type="checkbox"]:checked + label .trashBlue,
+input[type="checkbox"]:checked + label .extinguisherBlue {
+  display: none;
+}
+
+/* cache l'icon check */
+input[type="checkbox"]:checked + label .trashCheck,
+input[type="checkbox"]:checked + label .extinguisherCheck {
+  visibility: hidden;
+}
+
+/* révèle l'icon blanche */
+input[type="checkbox"]:checked + label .trashWhite,
+input[type="checkbox"]:checked + label .extinguisherWhite {
+  display: block;
+}
+
+/* révèle l'icon check */
+input[type="checkbox"]:checked + label .trashCheck,
+input[type="checkbox"]:checked + label .extinguisherCheck {
+  visibility: visible;
+}
+
+/* cercle pour le chargement des étapes */
+circle {
+  fill: none;
+  stroke: #46d0d9;
+  stroke-width: 10px;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 150;
 }
